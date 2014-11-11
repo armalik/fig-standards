@@ -161,12 +161,13 @@ class Foo
 
 ### 4.2. Properties
 
-This guide intentionally avoids any recommendation regarding the use of
-`$StudlyCaps`, `$camelCase`, or `$under_score` property names.
+Properties must be declared in lower case. Additionally, each word in property name must be separated with an underscore - that is, `$StudlyCaps` and  `$camelCase` must not be used.
 
-Whatever naming convention is used SHOULD be applied consistently within a
-reasonable scope. That scope may be vendor-level, package-level, class-level,
-or method-level.
+For example:
+```php
+$date = '2012-06-01';
+$date_approved = '2012-06-01';
+```
 
 ### 4.3. Methods
 
