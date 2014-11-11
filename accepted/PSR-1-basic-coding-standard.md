@@ -66,6 +66,7 @@ i.e, an example of what to avoid:
 
 ```php
 <?php
+
 // side effect: change ini settings
 ini_set('error_reporting', E_ALL);
 
@@ -87,6 +88,7 @@ effects; i.e., an example of what to emulate:
 
 ```php
 <?php
+
 // declaration
 function foo()
 {
@@ -94,7 +96,8 @@ function foo()
 }
 
 // conditional declaration is *not* a side effect
-if (! function_exists('bar')) {
+if (!function_exists('bar'))
+{
     function bar()
     {
         // function body
@@ -119,6 +122,7 @@ For example:
 
 ```php
 <?php
+
 // PHP 5.3 and later:
 namespace Vendor\Model;
 
@@ -132,6 +136,7 @@ of `Vendor_` prefixes on class names.
 
 ```php
 <?php
+
 // PHP 5.2.x and earlier:
 class Vendor_Model_Foo
 {
@@ -150,6 +155,7 @@ For example:
 
 ```php
 <?php
+
 namespace Vendor\Model;
 
 class Foo
@@ -161,7 +167,7 @@ class Foo
 
 ### 4.2. Properties
 
-Properties must be declared in lower case. Additionally, each word in property name must be separated with an underscore - that is, `$StudlyCaps` and  `$camelCase` must not be used.
+Properties MUST be declared in all lower case with underscore separators - that is, `$StudlyCaps` and  `$camelCase` must not be used.
 
 For example:
 ```php
