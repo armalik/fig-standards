@@ -32,6 +32,8 @@ interpreted as described in [RFC 2119].
 - There MUST NOT be a hard limit on line length; the soft limit MUST be 120
   characters; lines SHOULD be 80 characters or less.
 
+- There MUST be one blank line after the opening `<?php` tag in files containing only PHP.
+
 - There MUST be one blank line after the `namespace` declaration, and there
   MUST be one blank line after the block of `use` declarations.
 
@@ -60,6 +62,7 @@ This example encompasses some of the rules below as a quick overview:
 
 ```php
 <?php
+
 namespace Vendor\Package;
 
 use FooInterface;
@@ -153,6 +156,7 @@ For example:
 
 ```php
 <?php
+
 namespace Vendor\Package;
 
 use FooClass;
@@ -179,6 +183,7 @@ for the class MUST go on the next line after the body.
 
 ```php
 <?php
+
 namespace Vendor\Package;
 
 use FooClass;
@@ -197,6 +202,7 @@ MUST be on the next line, and there MUST be only one interface per line.
 
 ```php
 <?php
+
 namespace Vendor\Package;
 
 use FooClass;
@@ -227,6 +233,7 @@ A property declaration looks like the following.
 
 ```php
 <?php
+
 namespace Vendor\Package;
 
 class ClassName
@@ -252,6 +259,7 @@ parentheses, commas, spaces, and braces:
 
 ```php
 <?php
+
 namespace Vendor\Package;
 
 class ClassName
@@ -273,6 +281,7 @@ list.
 
 ```php
 <?php
+
 namespace Vendor\Package;
 
 class ClassName
@@ -294,6 +303,7 @@ between them.
 
 ```php
 <?php
+
 namespace Vendor\Package;
 
 class ClassName
@@ -318,6 +328,7 @@ declaration.
 
 ```php
 <?php
+
 namespace Vendor\Package;
 
 abstract class ClassName
@@ -343,6 +354,7 @@ each comma, and there MUST be one space after each comma.
 
 ```php
 <?php
+
 bar();
 $foo->bar($arg1);
 Foo::bar($arg2, $arg3);
@@ -354,6 +366,7 @@ next line, and there MUST be only one argument per line.
 
 ```php
 <?php
+
 $foo->bar(
     $longArgument,
     $longerArgument,
@@ -385,11 +398,12 @@ spaces, and braces.
 
 ```php
 <?php
+
 if ($expr1)
 {
     // if body
 }
-else if ($expr2)
+elseif ($expr2)
 {
     // elseif body
 }
@@ -409,6 +423,7 @@ indented at the same level as the `case` body. There MUST be a comment such as
 
 ```php
 <?php
+
 switch ($expr)
 {
     case 0:
@@ -436,6 +451,7 @@ parentheses, spaces, and braces.
 
 ```php
 <?php
+
 while ($expr)
 {
     // structure body
@@ -447,6 +463,7 @@ of parentheses, spaces, and braces.
 
 ```php
 <?php
+
 do
 {
     // structure body;
@@ -461,6 +478,7 @@ spaces, and braces.
 
 ```php
 <?php
+
 for ($i = 0; $i < 10; $i++)
 {
     // for body
@@ -474,6 +492,7 @@ parentheses, spaces, and braces.
 
 ```php
 <?php
+
 foreach ($iterable as $key => $value)
 {
     // foreach body
@@ -487,6 +506,7 @@ parentheses, spaces, and braces.
 
 ```php
 <?php
+
 try
 {
     // try body
@@ -525,6 +545,7 @@ parentheses, commas, spaces, and braces:
 
 ```php
 <?php
+
 $closureWithArgs = function ($arg1, $arg2) {
     // body
 };
@@ -548,6 +569,7 @@ variable lists split across multiple lines.
 
 ```php
 <?php
+
 $longArgs_noVars = function (
     $longArgument,
     $longerArgument,
@@ -598,6 +620,7 @@ in a function or method call as an argument.
 
 ```php
 <?php
+
 $foo->bar(
     $arg1,
     function ($arg2) use ($var1) {
