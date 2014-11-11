@@ -10,8 +10,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 interpreted as described in [RFC 2119].
 
 [RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
-[PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[PSR-4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[PSR-0]: https://github.com/armalik/fig-standards/blob/v1/accepted/PSR-0.md
+[PSR-4]: https://github.com/armalik/fig-standards/blob/v1/accepted/PSR-4-autoloader.md
 
 
 1. Overview
