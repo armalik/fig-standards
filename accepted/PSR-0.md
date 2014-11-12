@@ -1,6 +1,11 @@
 Autoloading Standard
 ====================
 
+> **Deprecated** - As of 2014-10-21 PSR-0 has been marked as deprecated. [PSR-4] is now recommended 
+as an alternative.
+
+[PSR-4]: http://github.com/armalik/fig-standards/blob/v1/accepted/PSR-4-autoloader.md
+
 The following describes the mandatory requirements that must be adhered
 to for autoloader interoperability.
 
@@ -54,11 +59,14 @@ function autoload($className)
     $className = ltrim($className, '\\');
     $fileName  = '';
     $namespace = '';
-    if ($lastNsPos = strrpos($className, '\\')) {
+    
+    if ($lastNsPos = strrpos($className, '\\'))
+    {
         $namespace = substr($className, 0, $lastNsPos);
         $className = substr($className, $lastNsPos + 1);
         $fileName  = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
     }
+    
     $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
 
     require $fileName;
